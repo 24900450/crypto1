@@ -19,7 +19,8 @@ STEP-5: Display the cipher text obtained above.
 ```c
 #include <stdio.h>
 
-int main() {
+int main()
+{
     char text[100];
     int key, i;
 
@@ -30,7 +31,8 @@ int main() {
     scanf("%d", &key);
 
     // Encrypt
-    for (i = 0; text[i] != '\0'; i++) {
+    for (i = 0; text[i] != '\0'; i++)
+    {
         if (text[i] >= 'A' && text[i] <= 'Z')
             text[i] = ((text[i] - 'A' + key) % 26) + 'A';
         else if (text[i] >= 'a' && text[i] <= 'z')
@@ -39,7 +41,8 @@ int main() {
     printf("Encrypted: %s\n", text);
 
     // Decrypt
-    for (i = 0; text[i] != '\0'; i++) {
+    for (i = 0; text[i] != '\0'; i++)
+    {
         if (text[i] >= 'A' && text[i] <= 'Z')
             text[i] = ((text[i] - 'A' - key + 26) % 26) + 'A';
         else if (text[i] >= 'a' && text[i] <= 'z')
